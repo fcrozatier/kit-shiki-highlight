@@ -1,5 +1,8 @@
-# Title
+# Real good post
 
-paragraphe
+This is a post
 
-## Subtitle
+```python
+def add(a,b):
+  return a+b
+```
