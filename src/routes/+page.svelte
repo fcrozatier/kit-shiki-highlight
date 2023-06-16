@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { getHighlighter, loadTheme } from 'shiki';
+	import { getHighlighter } from 'shiki';
 	import type { PageData } from './$types';
 	import { marked } from 'marked';
 	import { markedHighlight } from 'marked-highlight';
