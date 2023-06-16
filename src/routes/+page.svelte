@@ -9,9 +9,9 @@
 		markedHighlight({
 			async: true,
 			highlight(code, lang = 'text') {
-				return getHighlighter({ theme: 'nord', langs: ['python'] }).then((hl) => {
-					return escapeSvelte(hl.codeToHtml(code, { lang }));
-				});
+				return getHighlighter({ theme: 'nord', langs: ['python'] }).then((hl) =>
+					escapeSvelte(hl.codeToHtml(code, { lang }))
+				);
 			}
 		})
 	);
