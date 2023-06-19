@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Highlight from '$lib/Highlight.svelte';
+	import Markdown from '$lib/Markdown.svelte';
 
 	const md = `
 # Title
@@ -25,5 +25,5 @@ def add(a,b):
 <button on:click={add}>Add</button>
 
 {#each markdown as md}
-	<Highlight markdown={md} />
+	<Markdown markdown={md} />
 {/each}
