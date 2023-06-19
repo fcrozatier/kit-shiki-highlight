@@ -1,15 +1,6 @@
 <script context="module" lang="ts">
-	import { getHighlighter, setWasm } from 'shiki';
 	import { marked } from 'marked';
-
-	const wasmResponse = await fetch('/shiki/wasm/onig.wasm');
-	setWasm(wasmResponse);
-
-	const highlighter = await getHighlighter({
-		theme: 'dark-plus',
-		langs: ['python'],
-		paths: { languages: '/shiki/languages', themes: '/shiki/themes' }
-	});
+	import { highlighter } from './Highlight.svelte';
 
 	marked.use({
 		headerIds: false,

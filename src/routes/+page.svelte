@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Markdown from '$lib/Markdown.svelte';
+	import Highlight from '../lib/Highlight.svelte';
 
 	const md = `
 # Title
@@ -21,6 +22,14 @@ def add(a,b):
 
 <h1>Welcome to SvelteKit</h1>
 <p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+
+<h2>Code block</h2>
+
+<Highlight
+	code={`def hello():
+	return "hi"
+`}
+/>
 
 <button on:click={add}>Add</button>
 
