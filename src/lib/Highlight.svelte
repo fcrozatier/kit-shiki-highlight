@@ -1,13 +1,13 @@
 <script context="module" lang="ts">
-	import { getHighlighter, setWasm } from 'shiki';
-
-	const wasmResponse = await fetch('/shiki/wasm/onig.wasm');
-	setWasm(wasmResponse);
+	import { browser } from '$app/environment';
+	import { getHighlighter } from 'shiki';
 
 	export const highlighter = await getHighlighter({
-		theme: 'dark-plus',
+		theme: 'nord',
 		langs: ['python'],
-		paths: { languages: '/shiki/languages', themes: '/shiki/themes' }
+		paths: browser
+			? { languages: '/shiki/languages', themes: '/shiki/themes', wasm: '/shiki/wasm/' }
+			: undefined
 	});
 </script>
 

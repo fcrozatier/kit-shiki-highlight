@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Markdown from '$lib/Markdown.svelte';
+	import Highlight from '$lib/Highlight.svelte';
 
 	const md = `
 # Title
@@ -20,6 +21,12 @@ def add(a,b):
 </script>
 
 <h1>Reuse highlight</h1>
+
+<Highlight
+	code={`def hello():
+	return "hi"
+`}
+/>
 
 <button on:click={add}>Add</button>
 
