@@ -2,9 +2,9 @@
 	import Highlight from '$lib/Highlight.svelte';
 
 	const md = `
-# Real good post
+# Title
 
-This is a post
+Paragraph
 
 \`\`\`python
 def add(a,b):
