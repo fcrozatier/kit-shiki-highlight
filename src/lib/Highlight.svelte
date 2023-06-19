@@ -13,10 +13,7 @@
 
 	marked.use({
 		headerIds: false,
-		mangle: false
-	});
-
-	marked.use({
+		mangle: false,
 		renderer: {
 			code(code, language) {
 				return highlighter.codeToHtml(code, { lang: language });
@@ -27,12 +24,10 @@
 
 <script lang="ts">
 	export let markdown = '';
-
-	let html = marked.parse(markdown);
 </script>
 
-{#await html}
+{#await marked.parse(markdown)}
 	parsing...
-{:then code}
-	{@html code}
+{:then html}
+	{@html html}
 {/await}
